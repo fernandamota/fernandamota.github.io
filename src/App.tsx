@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ContractForm from './components/ContractForm';
 import ClientForm from './components/ClientForm';
 import Portfolio from './components/Portfolio';
-import MetaTagUpdater from './components/MetaTagUpdater';
 
 function App() {
   useEffect(() => {
@@ -17,7 +16,6 @@ function App() {
 
   return (
     <Router basename="/">
-      <MetaTagUpdater />
       <Routes>
         <Route path="/" element={<Portfolio />} />
         <Route path="/gerar-contrato" element={<ContractForm />} />
