@@ -5,6 +5,14 @@
   --ctp-base: #eff1f5;
   --ctp-surface0: #e6e9ef;
   --ctp-blue: #1e66f5;
+
+  /* Custom colors for Portfolio component */
+  --portfolio-dark-blue-purple: #1A1A2E;
+  --portfolio-medium-blue: #1F4287;
+  --portfolio-gold: #FFD700;
+  --portfolio-gold-rgb: 255, 215, 0;
+  --portfolio-lighter-gold: #FFEA00;
+  --portfolio-light-gray: #E0E0E0;
 }
 
 [data-bs-theme="dark"] {
@@ -12,6 +20,14 @@
   --ctp-base: #1e1e2e;
   --ctp-surface0: #313244;
   --ctp-blue: #89b4fa;
+
+  /* Custom colors for Portfolio component (dark theme) */
+  --portfolio-dark-blue-purple: #1A1A2E; /* Keeping same for now, adjust if needed */
+  --portfolio-medium-blue: #1F4287; /* Keeping same for now, adjust if needed */
+  --portfolio-gold: #FFD700; /* Keeping same for now, adjust if needed */
+  --portfolio-gold-rgb: 255, 215, 0;
+  --portfolio-lighter-gold: #FFEA00; /* Keeping same for now, adjust if needed */
+  --portfolio-light-gray: #E0E0E0; /* Keeping same for now, adjust if needed */
 }
 
 body {
