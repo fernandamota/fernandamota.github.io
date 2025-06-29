@@ -82,7 +82,7 @@ const Portfolio: React.FC = () => {
             {/* Seção Herói */}
             <section className="section-container hero-section">
                 <div className="hero-content">
-                    <p className="hero-eyebrow">Fernanda Mota | Psicóloga CRP 15/4321</p>
+                    <p className="hero-eyebrow">Fernanda Mota | Psicóloga CRP 02/21789</p>
                     <h1 className="hero-title">Um caminho seguro para o desenvolvimento e bem-estar</h1>
                     <p className="hero-description">Ofereço um espaço de escuta, acolhimento e técnica para crianças, adolescentes e suas famílias encontrarem novas formas de ser e estar no mundo.</p>
                     <button onClick={() => navigate('/client-contact')} className="cta-button">Agendar uma conversa</button>
