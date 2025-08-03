@@ -84,7 +84,7 @@ const Portfolio: React.FC = () => {
                 <div className="hero-content">
                     <p className="hero-eyebrow">Fernanda Mota | Psicóloga CRP 02/21789</p>
                     <h1 className="hero-title">Um caminho seguro para o desenvolvimento e bem-estar</h1>
-                    <p className="hero-description">Ofereço um espaço de escuta, acolhimento e técnica para crianças, adolescentes e suas famílias encontrarem novas formas de ser e estar no mundo.</p>
+                    <p className="hero-description">Ofereço um espaço de escuta, acolhimento e técnica para crianças, adolescentes e suas famílias, com atendimento online e presencial em Recife.</p>
                     <button onClick={() => navigate('/client-contact')} className="cta-button">Agendar uma conversa</button>
                 </div>
                 <div className="hero-image-wrapper">
