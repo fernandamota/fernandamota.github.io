@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://fernandamota.github.io/sitemap.xml
