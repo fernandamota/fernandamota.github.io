@@ -68,6 +68,7 @@
 .hero-title {
   font-family: var(--font-serif);
   font-size: 2.5rem;
+  color: var(--color-pomp-and-power);
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 1.5rem;
@@ -224,6 +225,7 @@
   transition: transform 0.3s ease;
   flex-shrink: 0;
   margin-left: 1rem;
+  font-size: 20px;
 }
 
 .faq-item.open .faq-question .icon {
@@ -274,3 +276,47 @@
 }
 .fab:hover { transform: scale(1.1); }
 /* ... (estilos de tooltip do FAB podem ser mantidos) ... */
+
+/* 8. Rodapé */
+.footer {
+  background-color: var(--text-primary);
+  color: var(--bg-light);
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.footer-content p {
+  font-size: 1rem;
+  color: var(--bg-light);
+  margin-bottom: 1.5rem;
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.footer-contact a {
+  color: var(--bg-light);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.footer-contact a:hover {
+  color: var(--color-old-rose);
+}
+
+.footer-contact svg {
+  font-size: 1.2rem;
+}

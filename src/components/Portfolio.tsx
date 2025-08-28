@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { FileText, Plus } from 'lucide-react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPhone, faEnvelope, faPlus, faFileAlt } from '@fortawesome/free-solid-svg-icons';
+import { faWhatsapp, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import './Portfolio.css';
 import fotoPrincipal from '../assets/images/foto-principal.webp'
 import fotoFormacao from '../assets/images/foto-formacao.webp';
@@ -12,19 +14,19 @@ import fotoAbordagem from '../assets/images/foto-abordagem.webp';
 const expertiseAreas = [
     {
         title: 'Formação Acadêmica',
-        description: 'Graduada em Psicologia pela Universidade Federal de Alagoas, com Pós-Graduação em Neuropsicologia e em TEA, buscando sempre a mais sólida base teórica para uma prática clínica eficaz e atualizada.',
+        description: 'Graduada em Psicologia pela Universidade Federal de Alagoas, com Pós-Graduação em Neuropsicologia e em TEA, formação em Gestalt-Terapia buscando sempre a mais sólida base teórica para uma prática clínica eficaz e atualizada.',
         imageUrl: fotoFormacao,
         tags: ['Psicologia', 'Neuropsicologia', 'Autismo'],
     },
     {
         title: 'Experiência Clínica',
-        description: 'Atuação na AACD e em consultório particular, com mais de 5 anos de experiência no atendimento de crianças e adolescentes com Espectro Autista, TDAH, Síndrome de Down e outras neurodivergências.',
+        description: 'Atuação na AACD e em consultório particular, com vasta experiência no cuidado a pessoas com deficiências físicas e neurodivergências, como Transtorno do Espectro Autista, TDAH, entre outras condições. Prática consolidada em escuta clínica qualificada, acolhendo crianças, adolescentes e adultos em diferentes contextos de desenvolvimento e saúde mental.',
         imageUrl: fotoExperiencia,
         tags: ['AACD', 'Crianças', 'Desenvolvimento Atípico'],
     },
     {
         title: 'Abordagem Terapêutica',
-        description: 'Foco na Gestalt-terapia, uma abordagem que valoriza o aqui-e-agora e a totalidade do ser. Utilizo também ferramentas das capacitações TEACCH e ABA para um suporte completo e individualizado.',
+        description: 'A prática clínica está fundamentada na Gestalt-terapia, abordagem humanista-existencial que compreende o indivíduo em sua totalidade, valorizando a consciência no aqui-e-agora, a integração entre dimensões emocionais, cognitivas e corporais e a responsabilidade no processo de desenvolvimento pessoal. Além disso, conta com capacitações específicas para o atendimento de pessoas neurodivergentes, possibilitando um suporte terapêutico individualizado e sensível às singularidades de cada sujeito.',
         imageUrl: fotoAbordagem,
         tags: ['Gestalt-terapia', 'TEACCH', 'ABA'],
     },
@@ -53,7 +55,7 @@ const FaqItem: React.FC<FaqItemProps> = ({ item, isOpen, toggle }) => (
     <div className={`faq-item ${isOpen ? 'open' : ''}`}>
         <button className="faq-question" onClick={toggle}>
             {item.question}
-            <Plus className="icon" size={20} />
+            <FontAwesomeIcon icon={faPlus} className="icon" />
         </button>
         <div className="faq-answer" style={{ maxHeight: isOpen ? '200px' : '0' }}>
             <p>{item.answer}</p>
@@ -83,8 +85,12 @@ const Portfolio: React.FC = () => {
             <section className="section-container hero-section">
                 <div className="hero-content">
                     <p className="hero-eyebrow">Fernanda Mota | Psicóloga CRP 02/21789</p>
-                    <h1 className="hero-title">Um caminho seguro para o desenvolvimento e bem-estar</h1>
-                    <p className="hero-description">Ofereço um espaço de escuta, acolhimento e técnica para crianças, adolescentes e suas famílias, com atendimento online e presencial em Recife.</p>
+                    <h1 className="hero-title">
+		Compromisso com a saúde mental e a qualidade de vida
+		</h1>
+                    <p className="hero-description">
+			Ofereço um espaço de acolhimento e escuta para quem busca fortalecer sua saúde mental. Através de uma abordagem humanista-existencial, ajudo as pessoas a explorar seus desafios e a encontrar novos caminhos para uma vida mais autêntica e significativa. Os atendimentos podem ser online ou presenciais em Recife.	
+		    </p>
                     <button onClick={() => navigate('/client-contact')} className="cta-button">Agendar uma conversa</button>
                 </div>
                 <div className="hero-image-wrapper">
@@ -149,9 +155,22 @@ const Portfolio: React.FC = () => {
                     title="Gerador de Contrato para Psicólogos"
                     className="fab"
                 >
-                    <FileText size={24} />
+                    <FontAwesomeIcon icon={faFileAlt} style={{ fontSize: '24px' }} />
                 </button>
             </div>
+
+            {/* Rodapé */}
+            <footer className="footer">
+                <div className="footer-content">
+                    <p>Fernanda Mota | Psicóloga CRP 02/21789</p>
+                    <div className="footer-contact">
+                        <a href="tel:+5581981297306" aria-label="Telefone"><FontAwesomeIcon icon={faPhone} /> (81) 98129-7306</a>
+                        <a href="https://wa.me/5581981297306" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><FontAwesomeIcon icon={faWhatsapp} /> (81) 98129-7306</a>
+                        <a href="mailto:psicofernanda85@gmail.com" aria-label="E-mail"><FontAwesomeIcon icon={faEnvelope} /> psicofernanda85@gmail.com</a>
+                        <a href="https://instagram.com/fernandamotapsi" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FontAwesomeIcon icon={faInstagram} /> @fernandamotapsi</a>
+                    </div>
+                </div>
+            </footer>
         </div>
     );
 };
